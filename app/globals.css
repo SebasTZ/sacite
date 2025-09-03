@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens to match design brief with vibrant red primary and modern palette */
+  --background: #ffffff; /* Main background color */
+  --foreground: #374151; /* Main text color */
+  --card: #fef2f2; /* Card background color */
+  --card-foreground: #374151; /* Card text color */
+  --popover: #ffffff; /* Popover background */
+  --popover-foreground: #374151; /* Popover text color */
+  --primary: #dc2626; /* Primary elements like buttons */
+  --primary-foreground: #ffffff; /* Text on primary buttons */
+  --secondary: #f59e0b; /* Secondary accents */
+  --secondary-foreground: #ffffff; /* Text on secondary elements */
+  --muted: #f1f5f9; /* Muted text color */
+  --muted-foreground: #6b7280; /* Muted text contrast */
+  --accent: #f59e0b; /* Accent colors for highlights */
+  --accent-foreground: #ffffff; /* Text on accent elements */
+  --destructive: #dc2626; /* Warning or error colors */
+  --destructive-foreground: #ffffff; /* Text on destructive elements */
+  --border: #6b7280; /* Border colors */
+  --input: #fef2f2; /* Input fields background */
+  --ring: #dc2626; /* Focus ring color */
+  --chart-1: #dc2626; /* Chart colors */
+  --chart-2: #f59e0b; /* Chart colors */
+  --chart-3: #374151; /* Chart colors */
+  --chart-4: #fef2f2; /* Chart colors */
+  --chart-5: #6b7280; /* Chart colors */
+  --radius: 0.5rem; /* Rounded corners for buttons and cards */
+  --sidebar: #ffffff; /* Sidebar background */
+  --sidebar-foreground: #374151; /* Sidebar text color */
+  --sidebar-primary: #dc2626; /* Primary sidebar color */
+  --sidebar-primary-foreground: #ffffff; /* Text on primary sidebar */
+  --sidebar-accent: #f59e0b; /* Sidebar accent colors */
+  --sidebar-accent-foreground: #ffffff; /* Text on sidebar accent */
+  --sidebar-border: #6b7280; /* Sidebar border color */
+  --sidebar-ring: #dc2626; /* Sidebar focus ring color */
+}
+
+.dark {
+  --background: #0f0f0f;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --primary: #ff1744;
+  --primary-foreground: #ffffff;
+  --secondary: #ff4081;
+  --secondary-foreground: #ffffff;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --accent: #ffd740;
+  --accent-foreground: #000000;
+  --destructive: #ff5252;
+  --destructive-foreground: #ffffff;
+  --border: #262626;
+  --input: #262626;
+  --ring: #ff1744;
+  --chart-1: #ff5252;
+  --chart-2: #ff4081;
+  --chart-3: #ffd740;
+  --chart-4: #ff1744;
+  --chart-5: #ff4081;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ff1744;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #262626;
+  --sidebar-ring: #ff1744;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced custom styles for SACITE branding with improved gradients and animations */
+.sacite-gradient {
+  background: linear-gradient(135deg, #dc2626 0%, #ff1744 50%, #f59e0b 100%);
+}
+
+.sacite-hero-gradient {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.9) 0%, rgba(255, 23, 68, 0.8) 100%);
+}
+
+.star-pattern {
+  background-image: radial-gradient(circle at 20% 50%, #f59e0b 2px, transparent 2px),
+    radial-gradient(circle at 80% 20%, #f59e0b 2px, transparent 2px),
+    radial-gradient(circle at 40% 80%, #dc2626 2px, transparent 2px),
+    radial-gradient(circle at 60% 30%, #f59e0b 1px, transparent 1px);
+  background-size: 120px 120px, 100px 100px, 80px 80px, 60px 60px;
+  animation: float-stars 20s ease-in-out infinite;
+}
+
+@keyframes float-stars {
+  0%,
+  100% {
+    background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+  25% {
+    background-position: 10% 10%, -5% 5%, 5% -5%, 15% 10%;
+  }
+  50% {
+    background-position: 20% 5%, -10% 10%, 10% -10%, 30% 5%;
+  }
+  75% {
+    background-position: 10% -5%, -5% 15%, 5% -15%, 15% -5%;
+  }
+}
+
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  animation: subtle-float 3s ease-in-out infinite;
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+}
+
+@keyframes subtle-float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.05);
+  }
+}
+
+/* Added enhanced button styles and hover effects */
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+}
+
+.btn-accent {
+  @apply bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+}
+
+/* Added card hover effects and improved spacing */
+.artist-card {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20;
+}
+
+.section-padding {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+.container-responsive {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Added responsive typography utilities */
+.heading-xl {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+}
+
+.heading-lg {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+}
+
+.heading-md {
+  @apply text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight;
+}
+
+.text-responsive {
+  @apply text-base md:text-lg lg:text-xl leading-relaxed;
+}
