@@ -1,5 +1,12 @@
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Facebook,
+  Twitter,
+  Instagram,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
@@ -16,8 +23,9 @@ export function Footer() {
               />
             </div>
             <p className="text-background/80 mb-6 max-w-md">
-              Comunidad Artística SACITE PERÚ - En defensa del artista peruano desde 1962. Protegemos los derechos de
-              músicos, actores, cantantes, circenses, bailarines e intérpretes.
+              Comunidad Artística SACITE PERÚ - En defensa del artista peruano
+              desde 1962. Protegemos los derechos de músicos, actores,
+              cantantes, circenses, bailarines e intérpretes.
             </p>
             <div className="flex space-x-4">
               <Button
@@ -59,14 +67,18 @@ export function Footer() {
                 <Mail className="h-5 w-5 text-primary mt-0.5" />
                 <div>
                   <p className="text-background/90">Email:</p>
-                  <p className="text-background font-medium">info@saciteperu.pe</p>
+                  <p className="text-background font-medium">
+                    info@saciteperu.pe
+                  </p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />
                 <div>
                   <p className="text-background/90">Oficina:</p>
-                  <p className="text-background font-medium">Jr. Zepita N° 713 - Of. 301, Cercado de Lima</p>
+                  <p className="text-background font-medium">
+                    Jr. Zepita N° 713 - Of. 301, Cercado de Lima
+                  </p>
                 </div>
               </div>
             </div>
@@ -76,19 +88,34 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-6">Enlaces Rápidos</h3>
             <div className="space-y-3">
-              <a href="#nosotros" className="block text-background/80 hover:text-background transition-colors">
+              <a
+                href="#nosotros"
+                className="block text-background/80 hover:text-background transition-colors"
+              >
                 Nosotros
               </a>
-              <a href="#logros" className="block text-background/80 hover:text-background transition-colors">
+              <a
+                href="#logros"
+                className="block text-background/80 hover:text-background transition-colors"
+              >
                 Logros
               </a>
-              <a href="#artistas" className="block text-background/80 hover:text-background transition-colors">
+              <a
+                href="#artistas"
+                className="block text-background/80 hover:text-background transition-colors"
+              >
                 Artistas Afiliados
               </a>
-              <a href="#galeria" className="block text-background/80 hover:text-background transition-colors">
+              <a
+                href="#galeria"
+                className="block text-background/80 hover:text-background transition-colors"
+              >
                 Galería
               </a>
-              <a href="#blog" className="block text-background/80 hover:text-background transition-colors">
+              <a
+                href="#blog"
+                className="block text-background/80 hover:text-background transition-colors"
+              >
                 Blog de Eventos
               </a>
               <a
@@ -107,13 +134,19 @@ export function Footer() {
         <div className="border-t border-background/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-background/60 text-sm mb-4 md:mb-0">
-              ©ING JUAN PABLO CASTRO | 2016 - 2024 | ALL RIGHTS RESERVED. SACITE PERU
+              Desarrollado por KoF.Dev 2025
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-background/60 hover:text-background transition-colors">
+              <a
+                href="#"
+                className="text-background/60 hover:text-background transition-colors"
+              >
                 Política de Privacidad
               </a>
-              <a href="#" className="text-background/60 hover:text-background transition-colors">
+              <a
+                href="#"
+                className="text-background/60 hover:text-background transition-colors"
+              >
                 Términos de Uso
               </a>
             </div>
@@ -121,5 +154,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
